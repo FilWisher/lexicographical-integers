@@ -21,3 +21,11 @@ main = do
         then print "always true"
         else error "this will never run"
 ```
+
+## API
+
+ - `encodeMax :: Word64` - The largest safely-encodable number using this encoding scheme
+ - `encode :: Word64 -> ByteString` - encode an integer as a ByteString
+ - `encodehex :: Word64 -> ByteString` - encode an integer as a hex encoded ByteString
+ - `decode :: ByteString -> Either String Word64` - decode a ByteString to an integer
+ - `decodehex :: ByteString -> Either String Word64` - decode a hex-encoded ByteString to an integer
